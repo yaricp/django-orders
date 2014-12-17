@@ -1,0 +1,24 @@
+{% load url from future %}
+{% load static i18n comments %}
+{{ form.media }}
+<link type="text/css" href="{% get_static_prefix %}css/form.css" rel="Stylesheet" />
+<h1>{% trans 'Order' %} № {{ object.id }}</h1>
+    <button onclick="load_form(url='/accounts/user/{{ object.client.profile.id }}')">
+        <i id="{{ object.client.profile.id }}" class="icon-user" ></i>
+        <p>{{ object.client }}</p>
+    </button>
+    <p>{{ object.type_work }}</p>
+    <form id="ajaxform" class="ajaxform" action="{% url 'order_edit' object.pk %}" method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        {{ form.as_p }}
+        {% include "form_errors.html" %}
+        <button class="btn btn-large" ><i class="icon-paper-plane"></i>{% trans 'Edit' %}</button>
+    </form>
+
+<b>{% trans 'comments' %}:</b>
+<p><button onclick="load_form(url='order/{{object.pk}}/comments')">
+    <i class="icon-chat-empty"></i>
+        {% get_comment_count for object as comment_count %}
+        {{ comment_count }}
+    </button></p>

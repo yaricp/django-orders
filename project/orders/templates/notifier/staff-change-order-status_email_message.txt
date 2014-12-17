@@ -1,0 +1,7 @@
+{% load i18n %}
+{% trans 'Good day!' %}
+{{ mess }}
+
+{% trans 'Order' %} : {{ order.absolute_url }}
+
+{% trans 'You can see and manage your orders' %}:

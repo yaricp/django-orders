@@ -1,0 +1,57 @@
+{% load i18n comments %}
+<tr>
+    <td>
+        <div class="span3">
+              <div class="css">
+                    {% if od.status != 4 %}
+                        <p onclick="load_form(url='order/{{od.pk}}/edit')"><i class="icon-wrench"></i></p>
+                    {% endif %}
+              </div>
+        </div>
+    </td>
+    <td><p>{{ od.id }}</p></td>
+    <td><p>{{ od.type_work }}</p></td>
+    <td class="middle-collapse"><p><i class="icon-clock"></i> {{ od.time_work }}</p></td>
+    <td class="middle-collapse"><p>{{ od.get_status_display }}</p></td>
+
+    <td class="nav-collapse"><button onclick="load_form(url='/accounts/user/{{od.client.profile.id}}')">
+        <i id="{{od.client.profile.id}}" class="icon-user" ></i>
+        <p>{{ od.client }}</p>
+        </button>
+    </td>
+         {% if user.is_superuser %}
+    <td class="nav-collapse">
+        <button onclick="load_form(url='/accounts/user/{{od.worker.profile.id}}')">
+            <i id="{{od.worker.profile.id}}" class="icon-wrench" ></i>
+            <p>{{ od.worker }}</p>
+        </button>
+    </td>
+         {% endif %}
+
+    <td class="nav-collapse"><p><i class="icon-rouble"></i>{% if od.summa %}{{ od.summa }}{% else %} - {% endif %}</p></td>
+    <td class="nav-collapse"><p>{% if od.paid %}{% trans 'paid' %}{% else %}{% trans 'waiting to pay' %}{% endif %}</p></td>
+    <td class="nav-collapse">
+        <p><button onclick="load_form(url='order/{{od.pk}}/comments')">
+            <i class="icon-chat-empty"></i>
+                {% get_comment_count for od as comment_count %}
+                {{ comment_count }}
+            </button>
+        </p></td>
+    <!--<td class="middle-collapse"><p>{{ od.timestart }}</p></td>-->
+    <!--
+    <td class="nav-collapse"><p>{% trans 'progress' %} {{ od.progress }}%</p></td>
+    <td class="nav-collapse"><p>{{ od.description }}</p></td>-->
+
+    <td>
+        <div  >
+                <div class="btn btn-navbar" onclick="load_form(url='order/{{od.pk}}')">
+                        <p><i class="icon-info-1"></i></p>
+                 </div>
+                </div>
+        </div>
+    </td>
+</tr>
+<tr><td>&nbsp;</td>
+    <td colspan="10"><div class="expand ps2" style="width:{{ od.progress }}%"> &nbsp; </div></td>
+    <td>&nbsp;</td>
+</tr>

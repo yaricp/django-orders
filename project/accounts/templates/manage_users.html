@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block js %}
+    <script type="text/javascript" src="{% get_static_prefix %}js/profile.js"></script>
+{% endblock %}
+{% block top_menu %}
+    {% if user.is_superuser %}
+        <li><a href="{% url 'manage_users' %}"><i class="icon-users-1"></i>{% trans 'manage users' %}</a></li>
+        <li><a href="{% url 'list_type_work' %}"><i class="icon-list-bullet"></i>{% trans 'manage works' %}</a></li>
+    {% endif %}
+{% endblock %}
+{% block content %}
+<div class="container skills">
+        <h2>{% trans 'Manage users' %}</h2>
+    <table class="orders" >
+            <tr><th></th>
+                <th>{% trans 'User' %}</th>
+                <th class="middle-collapse">{% trans 'Is superuser' %}</th>
+                <th class="middle-collapse">{% trans 'Is staff' %}</th>
+                <th class="middle-collapse">{% trans 'Active' %}</th>
+                <th class="nav-collapse">{% trans 'Phone' %}</th>
+                <th class="nav-collapse">{% trans 'Email' %}</th>
+                <th class="nav-collapse">{% trans 'Info' %}</th>
+                <th class="nav-collapse">{% trans 'Last visit' %}</th>
+                <th></th>
+        </tr>
+        {% for pr in profiles %}
+            <tr>
+                <td>
+                    <div class="skills span3">
+                          <div class="css">
+                                {% if od.status != 4 %}
+                                    <p onclick="load_form('../user/{{ pr.user.pk }}/edit')"><i class="icon-pencil-1"></i></p>
+                                {% endif %}
+                          </div>
+                    </div>
+                </td>
+                <td><p>{{ pr.user.username }}</p></td>
+                <td class="middle-collapse"><p>{% if  pr.user.is_superuser %} {% trans 'yes' %} {% else %} {% trans 'no' %} {% endif %}</p></td>
+                <td class="middle-collapse"><p>{% if  pr.user.is_staff %} {% trans 'yes' %} {% else %} {% trans 'no' %} {% endif %}</p></td>
+                <td class="middle-collapse"><p>{% if  pr.user.is_active %} {% trans 'yes' %} {% else %} {% trans 'no' %} {% endif %}</p></td>
+                <td class="nav-collapse"><p>{{ pr.phone }}</p></td>
+                <td class="nav-collapse"><p>{{ pr.user.mail }}</p></td>
+                <td class="nav-collapse"><p>{{ pr.info }}</p></td>
+                <td class="nav-collapse"><p>{{ pr.user.last_login }}</p></td>
+                <td>
+                    <div class="navbar">
+                            <div class="btn btn-navbar" onclick="load_form('../user/{{ pr.pk }}')">
+                                    <p><i class="icon-info-1"></i></p>
+                             </div>
+                            </div>
+                    </div>
+                </td>
+            </tr>
+            <tr><td>&nbsp;</td>
+                <td colspan="8"><div class="expand ps2" > &nbsp; </div></td>
+                <td>&nbsp;</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}
+

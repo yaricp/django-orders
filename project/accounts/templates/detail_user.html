@@ -1,0 +1,39 @@
+{% load static i18n %}
+
+<link type="text/css" href="{% get_static_prefix %}css/form.css" rel="Stylesheet" />
+<header><h2><i class="icon-user"></i>{% trans 'User' %} {{ object.user.username }}</h2></header>
+
+<p><b>{% trans 'Full name' %}: {{ object.fullname }}</b></p>
+<p><b>{% trans 'Is superuser' %}:
+                {% if  object.user.is_superuser %}
+                    {% trans 'yes' %}
+                {% else %}
+                    {% trans 'no' %}
+                {% endif %}
+</b></p>
+<p><b>{% trans 'Is staff' %}:
+                {% if  object.user.is_staff %}
+                    {% trans 'yes' %}
+                {% else %}
+                    {% trans 'no' %}
+                {% endif %}
+</b></p>
+<p><b>{% trans 'Active' %}:
+                {% if  object.user.is_active %}
+                    {% trans 'yes' %}
+                {% else %}
+                    {% trans 'no' %}
+                {% endif %}
+</b></p>
+<p><b>{% trans 'Phone' %}: {{ object.phone }}</b></p>
+<p><b>{% trans 'Email' %}: {{ object.user.email }}</b></p>
+<p><b>{% trans 'Info' %}: {{ object.info }}</b></p>
+<p><b>{% trans 'name on forum' %}: {% if profile.nikforum %}
+        <a href="{{ profile.nikforum }}">{% trans 'profile on forum' %}</a>
+    {% endif %}
+        </b></p>
+<p><b>{% trans 'Last visit' %}: {{ object.user.last_login }}</b></p>
+<p><b>{% trans 'point in a map' %}: {% if profile.pointmap %}
+        <a href="{{ profile.pointmap }}">{% trans 'point' %}</a>
+    {% endif %}
+        </b></p>

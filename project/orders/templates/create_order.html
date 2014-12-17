@@ -1,0 +1,12 @@
+{% load url from future %}
+{% load static i18n %}
+{{ form.media }}
+<link type="text/css" href="{% get_static_prefix %}css/form.css" rel="Stylesheet" />
+<h1>{% trans 'Create Order' %}</h1>
+    <form id="ajaxform" class="ajaxform" action="{% url 'create_order' %}" method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        {{ form.as_p }}
+        {% include "form_errors.html" %}
+        <button class="btn btn-large" ><i class="icon-paper-plane"></i>{% trans 'Create' %}</button>
+    </form>

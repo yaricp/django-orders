@@ -1,0 +1,19 @@
+{% load url from future %}
+{% load static i18n %}
+<link type="text/css" href="{% get_static_prefix %}css/form.css" rel="Stylesheet" />
+<script type="text/javascript" src="{% get_static_prefix %}js/ajax_form.js"></script>
+<h1>Авторизация</h1>
+    <form id="ajaxform" class="ajaxform" action="{% url 'auth_login' %}" method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        {{ form.as_p }}
+      <!-- Errors -->
+      {% include "form_errors.html" %}
+      <a href="javascript: void(0);" onclick="load_form(url='/accounts/password/reset/')">{% trans 'Remember password' %}</a>
+        <p></p>
+      <a href="javascript: void(0);" onclick="load_form(url='/accounts/register/')">{% trans 'Registration' %}</a>
+      <p></p>
+      <button class="btn btn-large"><i class="icon-paper-plane"></i>{% trans 'Log in' %}</button>
+    </div>
+  </div>
+</form>

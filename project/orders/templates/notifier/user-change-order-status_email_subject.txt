@@ -1,0 +1,2 @@
+{% load i18n %}
+{% trans 'Client make change status of order' %} {{ order.get_absolute_url }}

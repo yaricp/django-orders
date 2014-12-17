@@ -1,0 +1,11 @@
+{% load static i18n %}
+{{ form.media }}
+<link type="text/css" href="{% get_static_prefix %}css/form.css" rel="Stylesheet" />
+<h2><i class="icon-user"></i>{% trans 'User' %}: {{ object.username }}</h2>
+    <form id="ajaxform" class="ajaxform" action="{% url 'edit_user' object.pk %}" method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        {{ form.as_p }}
+        {% include "form_errors.html" %}
+        <button class="btn btn-large"><i class="icon-paper-plane"></i>{% trans 'Change' %}</button>
+    </form>

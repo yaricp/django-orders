@@ -1,0 +1,11 @@
+{% load static i18n %}
+{{ form.media }}
+<link type="text/css" href="{% get_static_prefix %}css/form.css" rel="Stylesheet" />
+<h2>{% trans 'New Type Work' %}</h2>
+    <form id="ajaxform" class="ajaxform" action="{% url 'create_type_work' %}" method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        {{ form.as_p }}
+        {% include "form_errors.html" %}
+        <button class="btn btn-large" ><i class="icon-paper-plane"></i>{% trans 'Create' %}</button>
+    </form>

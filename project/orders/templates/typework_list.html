@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block js %}
+    <script type="text/javascript" src="{% get_static_prefix %}js/orders.js"></script>
+{% endblock %}
+{% block top_menu %}
+    {% if user.is_superuser %}
+        <li><a href="{% url 'manage_users' %}"><i class="icon-users-1"></i>{% trans 'manage users' %}</a></li>
+        <li><a href="{% url 'list_type_work' %}"><i class="icon-list-bullet"></i>{% trans 'manage works' %}</a></li>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="container  skills">
+<h2>{% trans 'Manage types of works' %}</h2>
+
+<button class="btn btn-large" onclick="load_edit_typework_form(pk=0)">
+    <i class="icon-plus"></i>{% trans 'New type of work' %}
+</button>
+  <div class="skills">
+    <div class="row">
+        <div class="span3">
+            <h3>&nbsp;</h3>
+        </div>
+    </div>
+    {% for work in works %}
+        <div class="row">
+        <div class="span3">
+          <div class="css">
+            <h3 onclick="load_edit_typework_form(pk={{work.pk}})">
+            <i class="icon-pencil-1"></i></h3>
+          </div>
+        </div>
+        <div class="span5">
+          <h3>{{ work.name }}</h3>
+          <div > <span class="expand ps2"> &nbsp; </span> </div>
+        </div>
+      </div>
+    {% endfor %}
+
+    <div name="popup-edit-typework-form" id="popup-edit-typework-form" class="popup-edit-typework-form" >
+
+</div>
+
+{% endblock %}
+

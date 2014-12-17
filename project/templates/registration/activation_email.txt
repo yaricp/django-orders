@@ -1,0 +1,9 @@
+{% load url from future %}
+{% load i18n %}
+{% trans 'You fill out the registration form on the site' %} {{ site.name }}.
+
+{% trans 'Your account' %} ({{ username }}) {% trans 'must be activated' %}. {% trans 'To do this, click on the link' %}:
+
+http://{{ site.domain }}{% url 'registration_activate' activation_key=activation_key %}
+
+{% trans 'If you have not registered on this site, ignore this message' %}.

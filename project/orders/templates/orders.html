@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block js %}
+    <script type="text/javascript" src="{% get_static_prefix %}js/orders.js"></script>
+{% endblock %}
+{% block top_menu %}
+        <li class="notes"><a href="javascript: void(0)" onclick="load_form(url='create_order')"><i class="icon-plus"></i>{% trans 'New order' %}</a></li>
+{% endblock %}
+{% block content %}
+    <div class="container skills">
+        <h2>{% trans 'Orders' %}</h2>
+        <table class="orders" >
+            {% for od in orders %}
+                {% if od.status == 0 %}
+
+                        {% include 'row_of_orders.html' %}
+
+                {% endif %}
+            {% endfor %}
+        </table>
+
+            <h2>
+                {% if user.is_staff or user.is_superuser %}
+                    {% trans 'My orders' %}
+                {% else %}
+                    {% trans 'Orders in work' %}
+                {% endif %}
+            </h2>
+        <table class="orders" >
+            {% for od in orders %}
+
+                {% if od.status != 0 and od.status != 4 %}
+
+                    {% if user.is_staff or user.is_superuser %}
+                        {% if od.worker == user %}
+                            {% include 'row_of_orders.html' %}
+                        {% endif %}
+                    {% else %}
+                        {% include 'row_of_orders.html' %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </table>
+            {% if user.is_superuser %}
+            <h2>{% trans 'Orders of managers' %}</h2>
+        <table class="orders" >
+                {% for od in orders %}
+                    {% if od.worker != user and od.status != 0 and od.status != 4 and od.status != 2%}
+                        {% include 'row_of_orders.html' %}
+                    {% endif %}
+                {% endfor %}
+        </table>
+            {% endif %}
+        <h2>{% trans 'Finished' %}</h2>
+        <table class="orders" >
+            {% for od in orders %}
+                {% if od.status == 2 %}
+                    {% include 'row_of_orders.html' %}
+                {% endif %}
+            {% endfor %}
+        </table>
+        <h2>{% trans 'Cancelled' %}</h2>
+        <table class="orders" >
+            {% for od in orders %}
+                {% if od.status == 4 %}
+                    {% include 'row_of_orders.html' %}
+                {% endif %}
+            {% endfor %}
+        </table>
+    </div>
+
+    <div name="popup-order-form" id="popup-order-form" class="popup-order-form" >
+
+    </div>
+
+{% endblock %}
+

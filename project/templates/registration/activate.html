@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block html_title %}{% trans 'Registration' %}{{ block.super }}{% endblock %}
+{% block page_title %}{% trans 'Activation failed' %}{% endblock %}
+{% block breadcrumbs_wrap %}{% endblock %}
+{% block content %}
+  <div class="textpage">
+    <p>{% trans 'Wrong activation code, try the link again.' %}</p>
+  </div>
+{% endblock %}

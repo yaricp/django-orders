@@ -1,0 +1,13 @@
+{% load i18n %}
+<div id="loading" style="display:none;">
+    <span id="load_text">{% trans 'loading...' %}</span>
+</div>
+<div id="form_ajax" style="display:none;">
+    <span>{% trans 'Form submit successfully.' %}</span>
+</div>
+<div id="form_ajax_error" style="display:none;">
+    <span>{% trans 'Can not submit data due to errors.' %}</span>
+</div>
+<p>
+  <input id="id___all__" type="hidden" name="id___all__">
+</p>

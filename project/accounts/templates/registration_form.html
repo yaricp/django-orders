@@ -1,0 +1,16 @@
+{% load static %}
+{% load i18n %}
+<link type="text/css" href="{% get_static_prefix %}css/form.css" rel="Stylesheet" />
+<script type="text/javascript" src="{% get_static_prefix %}js/ajax_form.js"></script>
+
+<h1>{% trans 'Registration' %}</h1>
+<form id="ajaxform" class="ajaxform" action="{% url 'register' %}" method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        {{ form.as_p }}
+        <div class='captcha-refresh'><i class="icon-paper-plane"></i>{% trans 'refresh captcha'%}</div>
+      <!-- Errors -->
+      {% include "form_errors.html" %}
+    <button class="btn btn-large"><i class="icon-paper-plane"></i>{% trans 'Register' %}</button>
+</form>
+

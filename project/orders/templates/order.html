@@ -1,0 +1,27 @@
+{% load static i18n comments %}
+
+<link type="text/css" href="{% get_static_prefix %}css/form.css" rel="Stylesheet" />
+<header><h2>{% trans 'Order' %} № {{ object.id }}</h2></header>
+
+<p><b>{% trans 'Type of work ' %}: {{ object.type_work }}</b></p>
+<p><b>{% trans 'Start time' %}: {{ object.timestart }}</b></p>
+<p><b>{% trans 'Client' %}: </b> <button onclick="load_form(url='/accounts/user/{{object.client.profile.id}}')">
+                                    <i class="icon-user" ></i>
+                                    <p>{{ object.client }}</p>
+                                 </button>
+<p><b>{% trans 'Manager' %}: {{ object.worker }}</b></p>
+<p><b>{% trans 'Time of work' %}: {{ object.time_work }}</b></p>
+<p><b>{% trans 'Sum' %}: {% if object.summa %} {{ object.summa }} {% endif %}</b></p>
+<p><b>{% trans 'Paid' %}: {% if object.paid %}{% trans 'yes' %}{% else %}{% trans 'no' %}{% endif %}</b></p>
+<p><b>{% trans 'Status' %}: {{ object.get_status_display }}</b></p>
+<p><b>{% trans 'Progress' %}: {{ object.progress }}</b></p>
+<p><b>{% trans 'Description' %}: {{ object.description }}</b></p>
+<p><b>{% trans 'comments' %}:</b>
+    <button onclick="load_form(url='order/{{object.pk}}/comments')">
+        <i class="icon-chat-empty"></i>
+        {% get_comment_count for object as comment_count %}
+    {{ comment_count }}
+    </button>
+    </p>
+
+

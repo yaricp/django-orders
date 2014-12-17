@@ -1,0 +1,2 @@
+{%load i18n %}
+{% trans 'Change status of your order in system.' %}

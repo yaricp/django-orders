@@ -1,0 +1,14 @@
+{{ form.media }}
+{% load static i18n %}
+<link type="text/css" href="{% get_static_prefix %}css/form.css" rel="Stylesheet" />
+<script type="text/javascript" src="{% get_static_prefix %}js/ajax_form.js"></script>
+
+<h2><i class="icon-user"></i>{% trans 'Profile' %}</h2>
+        <form id="ajaxform" class="ajaxform" action="{% url 'edit_profile' %}" method="post">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {{ form.as_p }}
+            {% include "form_errors.html" %}
+            <button class="btn btn-large"><i class="icon-paper-plane"></i>{% trans 'Send' %}</button>
+        </form>
+

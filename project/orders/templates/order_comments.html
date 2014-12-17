@@ -1,0 +1,18 @@
+{% load static i18n comments %}
+<header><h2>{% trans 'Order' %} № {{ object.id }}</h2></header>
+
+<p><b>{% trans 'Type of work ' %}: {{ object.type_work }}</b></p>
+<p>{% trans 'comments' %}:</p>
+<p>{% render_comment_list for object %}</p>
+<h3>{% trans 'add comment' %}</h3>
+    {% get_comment_form for object as form %}
+    <form action="{% comment_form_target %}" method="POST">
+    {% csrf_token %}
+    {{ form.comment }}
+    {{ form.content_type }}
+    {{ form.object_pk }}
+    {{ form.timestamp }}
+    {{ form.security_hash }}
+    <input type="hidden" name="next" value="{% url 'orders' %}" />
+    <input type="submit" value="Add comment" id="id_submit" />
+    </form>

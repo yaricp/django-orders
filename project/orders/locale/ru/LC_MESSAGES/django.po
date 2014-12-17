@@ -1,0 +1,581 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-05 21:59+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: univer_land/accounts/forms.py:45 univer_land/accounts/models.py:11
+msgid "fullname"
+msgstr "Полное имя"
+
+#: univer_land/accounts/forms.py:46
+msgid "phone"
+msgstr "Телефон"
+
+#: univer_land/accounts/forms.py:47 univer_land/accounts/models.py:13
+msgid "additional information"
+msgstr "Дополнительная информация"
+
+#: univer_land/accounts/forms.py:49 univer_land/accounts/models.py:14
+msgid "address"
+msgstr "Адрес"
+
+#: univer_land/accounts/models.py:8
+msgid "user"
+msgstr "Пользователь"
+
+#: univer_land/accounts/models.py:12
+msgid "phone number"
+msgstr "Номер телефона"
+
+#: univer_land/accounts/views.py:83
+msgid "Changing password"
+msgstr "Изменение пароля"
+
+#: univer_land/accounts/views.py:84
+#: univer_land/accounts/templates/update_user_form.html:10
+msgid "Change"
+msgstr "Изменить"
+
+#: univer_land/accounts/views.py:103
+msgid "Reset password"
+msgstr "Сбросить пароль"
+
+#: univer_land/accounts/views.py:104
+#: univer_land/accounts/templates/edit_profile.html:12
+msgid "Send"
+msgstr "Пуск"
+
+#: univer_land/accounts/templates/detail_user.html:4
+#: univer_land/accounts/templates/manage_users.html:17
+#: univer_land/accounts/templates/update_user_form.html:4
+msgid "User"
+msgstr "Пользователь"
+
+#: univer_land/accounts/templates/detail_user.html:6
+msgid "First name"
+msgstr "Имя"
+
+#: univer_land/accounts/templates/detail_user.html:7
+msgid "Last name"
+msgstr "Фамилия"
+
+#: univer_land/accounts/templates/detail_user.html:8
+#: univer_land/accounts/templates/manage_users.html:18
+msgid "Is superuser"
+msgstr "Суперпользователь"
+
+#: univer_land/accounts/templates/detail_user.html:9
+#: univer_land/accounts/templates/manage_users.html:19
+msgid "Is staff"
+msgstr "Сотрудник"
+
+#: univer_land/accounts/templates/detail_user.html:10
+#: univer_land/accounts/templates/manage_users.html:20
+msgid "Active"
+msgstr "Активный"
+
+#: univer_land/accounts/templates/detail_user.html:11
+#: univer_land/accounts/templates/manage_users.html:21
+#: univer_land/accounts/templates/profile.html:22
+#: univer_land/templates/contacts.html:4
+msgid "Phone"
+msgstr "Телефон"
+
+#: univer_land/accounts/templates/detail_user.html:12
+#: univer_land/accounts/templates/manage_users.html:22
+#: univer_land/accounts/templates/profile.html:24
+msgid "Email"
+msgstr "Почта"
+
+#: univer_land/accounts/templates/detail_user.html:13
+#: univer_land/accounts/templates/manage_users.html:23
+#: univer_land/accounts/templates/profile.html:23
+msgid "Info"
+msgstr "Информация"
+
+#: univer_land/accounts/templates/detail_user.html:14
+#: univer_land/accounts/templates/manage_users.html:24
+msgid "Last visit"
+msgstr "Дата последнего визита"
+
+#: univer_land/accounts/templates/edit_profile.html:6
+#: univer_land/accounts/templates/profile.html:18
+#: univer_land/templates/base.html:40
+msgid "Profile"
+msgstr "Профиль"
+
+#: univer_land/accounts/templates/form_errors.html:3
+#: univer_land/orders/templates/form_errors.html:3
+msgid "loading..."
+msgstr "загрузка..."
+
+#: univer_land/accounts/templates/form_errors.html:6
+#: univer_land/orders/templates/form_errors.html:6
+msgid "Form submit successfully."
+msgstr "Данные успешно отправлены."
+
+#: univer_land/accounts/templates/form_errors.html:9
+#: univer_land/orders/templates/form_errors.html:9
+msgid "Can not submit data due to errors."
+msgstr "Не возможно отправить данные из-за ошибки."
+
+#: univer_land/accounts/templates/login_form.html:12
+msgid "Remember password"
+msgstr "Вспомнить пароль"
+
+#: univer_land/accounts/templates/login_form.html:14
+#: univer_land/accounts/templates/registration_complete.html:3
+#: univer_land/accounts/templates/registration_form.html:6
+#: univer_land/templates/registration/activate.html:3
+#: univer_land/templates/registration/activation_complete.html:3
+#: univer_land/templates/registration/registration_complete.html:3
+msgid "Registration"
+msgstr "Регистрация"
+
+#: univer_land/accounts/templates/login_form.html:16
+#: univer_land/templates/base.html:46
+msgid "Log in"
+msgstr "Войти"
+
+#: univer_land/accounts/templates/manage_users.html:8
+#: univer_land/accounts/templates/profile.html:11
+#: univer_land/orders/templates/typework_list.html:8
+msgid "manage users"
+msgstr "Управление пользователями"
+
+#: univer_land/accounts/templates/manage_users.html:9
+#: univer_land/accounts/templates/profile.html:12
+#: univer_land/orders/templates/typework_list.html:9
+msgid "manage works"
+msgstr "Управление типами работ"
+
+#: univer_land/accounts/templates/manage_users.html:14
+msgid "Manage users"
+msgstr "Управление пользователями"
+
+#: univer_land/accounts/templates/manage_users.html:33
+#: univer_land/orders/templates/typework_list.html:30
+#: univer_land/orders/templatetags/menu.py:20
+msgid "edit"
+msgstr "ред."
+
+#: univer_land/accounts/templates/manage_users.html:39
+#: univer_land/accounts/templates/manage_users.html:40
+#: univer_land/accounts/templates/manage_users.html:41
+msgid "yes"
+msgstr "да"
+
+#: univer_land/accounts/templates/manage_users.html:39
+#: univer_land/accounts/templates/manage_users.html:40
+#: univer_land/accounts/templates/manage_users.html:41
+msgid "no"
+msgstr "нет"
+
+#: univer_land/accounts/templates/profile.html:8
+#: univer_land/orders/templates/edit_type_work.html:11
+#: univer_land/orders/templates/order_edit.html:11
+msgid "Edit"
+msgstr "Изменить"
+
+#: univer_land/accounts/templates/profile.html:9
+msgid "Change password"
+msgstr "Сменить пароль"
+
+#: univer_land/accounts/templates/profile.html:20
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: univer_land/accounts/templates/profile.html:21
+msgid "Fullname"
+msgstr "Полное имя"
+
+#: univer_land/accounts/templates/profile.html:25
+msgid "Last login"
+msgstr "Дата последнего посещения"
+
+#: univer_land/accounts/templates/registration_complete.html:4
+msgid "Registration finished! success!"
+msgstr "Регистрация окончена успешно!"
+
+#: univer_land/accounts/templates/registration_complete.html:8
+#: univer_land/templates/registration/registration_complete.html:8
+msgid "We have sent you an email with a link to activate your account."
+msgstr ""
+"Мы выслали Вам на указанный вами адрес электронной почты ссылку для "
+"активации Вашего аккаунта."
+
+#: univer_land/accounts/templates/registration_form.html:14
+msgid "Register"
+msgstr "Регистрация"
+
+#: univer_land/accounts/templates/notifier/new-user_email_message.txt:2
+msgid "Register a new user"
+msgstr "Регистрация нового пользователя"
+
+#: univer_land/accounts/templates/notifier/new-user_email_subject.txt:3
+msgid "New user in the system of orders"
+msgstr "Новый пользователь зарегистрировался в системе приема заявок"
+
+#: univer_land/orders/forms.py:38 univer_land/orders/models.py:18
+msgid "init"
+msgstr "новый"
+
+#: univer_land/orders/forms.py:39 univer_land/orders/forms.py:53
+#: univer_land/orders/forms.py:74 univer_land/orders/models.py:22
+msgid "cancel"
+msgstr "отменен"
+
+#: univer_land/orders/forms.py:50 univer_land/orders/models.py:19
+msgid "start"
+msgstr "в работе"
+
+#: univer_land/orders/forms.py:51 univer_land/orders/forms.py:72
+#: univer_land/orders/models.py:20
+msgid "end"
+msgstr "завершен"
+
+#: univer_land/orders/forms.py:52 univer_land/orders/forms.py:73
+#: univer_land/orders/models.py:21
+msgid "wait"
+msgstr "ожидаем"
+
+#: univer_land/orders/models.py:9
+msgid "Name"
+msgstr "Название"
+
+#: univer_land/orders/models.py:26 univer_land/orders/templates/order.html:8
+msgid "Client"
+msgstr "Клиент"
+
+#: univer_land/orders/models.py:28
+msgid "date of initialization"
+msgstr "дата создания"
+
+#: univer_land/orders/models.py:29
+msgid "type of work"
+msgstr "тип работы"
+
+#: univer_land/orders/models.py:30
+msgid "time of work prev"
+msgstr "необходимое время (предв.)"
+
+#: univer_land/orders/models.py:31
+msgid "status of order"
+msgstr "статус заказа"
+
+#: univer_land/orders/models.py:33
+msgid "Worker"
+msgstr "Исполнитель"
+
+#: univer_land/orders/models.py:35 univer_land/orders/templates/order.html:14
+msgid "Sum"
+msgstr "Сумма"
+
+#: univer_land/orders/models.py:37 univer_land/orders/templates/order.html:17
+msgid "Progress"
+msgstr "Сделано"
+
+#: univer_land/orders/models.py:38 univer_land/orders/templates/order.html:18
+msgid "Description"
+msgstr "Описание"
+
+#: univer_land/orders/models.py:40
+msgid "status of pay"
+msgstr "Оплачено"
+
+#: univer_land/orders/views.py:100
+msgid "Your order was start in our system. Manager "
+msgstr "Ваш заказ принят к исполнению. Исполнитель "
+
+#: univer_land/orders/views.py:110
+msgid "Status of your order was changed on"
+msgstr "Статус заказа был изменен на"
+
+#: univer_land/orders/views.py:118
+msgid "Status of order "
+msgstr "Статус заказа "
+
+#: univer_land/orders/views.py:168
+msgid "Is new order in system. "
+msgstr "Новый заказ. "
+
+#: univer_land/orders/templates/create_order.html:5
+msgid "Create Order"
+msgstr "Новый заказ"
+
+#: univer_land/orders/templates/create_order.html:11
+#: univer_land/orders/templates/create_type_work.html:10
+msgid "Create"
+msgstr "Создать"
+
+#: univer_land/orders/templates/create_type_work.html:4
+msgid "New Type Work"
+msgstr "Новый тип работ"
+
+#: univer_land/orders/templates/edit_type_work.html:5
+msgid "TypeWork"
+msgstr "Тип работ"
+
+#: univer_land/orders/templates/order.html:4
+#: univer_land/orders/templates/order_edit.html:5
+#: univer_land/orders/templates/notifier/staff-change-order-status_email_message.txt:5
+msgid "Order"
+msgstr "Заказ"
+
+#: univer_land/orders/templates/order.html:6
+msgid "Type of work "
+msgstr "Тип работ"
+
+#: univer_land/orders/templates/order.html:7
+msgid "Start time"
+msgstr "Время начала"
+
+#: univer_land/orders/templates/order.html:12
+msgid "Manager"
+msgstr "Исполнитель"
+
+#: univer_land/orders/templates/order.html:13
+msgid "Time of work"
+msgstr "Время работы"
+
+#: univer_land/orders/templates/order.html:15
+msgid "Paid"
+msgstr "Оплачено"
+
+#: univer_land/orders/templates/order.html:16
+msgid "Status"
+msgstr "Статус"
+
+#: univer_land/orders/templates/orders.html:8
+msgid "New order"
+msgstr "Новый заказ"
+
+#: univer_land/orders/templates/orders.html:12
+#: univer_land/templates/base.html:41
+msgid "Orders"
+msgstr "Заказы"
+
+#: univer_land/orders/templates/orders.html:25
+msgid "My orders"
+msgstr "Мои заказы"
+
+#: univer_land/orders/templates/orders.html:27
+msgid "Orders in work"
+msgstr "Заказы в работе"
+
+#: univer_land/orders/templates/orders.html:46
+msgid "Orders of managers"
+msgstr "Заказы по исполнителям"
+
+#: univer_land/orders/templates/orders.html:55
+msgid "Finished"
+msgstr "Завершенные"
+
+#: univer_land/orders/templates/orders.html:63
+msgid "Cancelled"
+msgstr "Отмененные"
+
+#: univer_land/orders/templates/row_of_orders.html:14
+msgid "paid"
+msgstr "оплачено"
+
+#: univer_land/orders/templates/row_of_orders.html:14
+msgid "waiting to pay"
+msgstr "ожидает оплаты"
+
+#: univer_land/orders/templates/typework_list.html:15
+msgid "Manage types of works"
+msgstr "Управление типами работ"
+
+#: univer_land/orders/templates/typework_list.html:18
+msgid "New type of work"
+msgstr "Новый тип работ"
+
+#: univer_land/orders/templates/notifier/new-order_email_message.txt:3
+msgid "thank you!"
+msgstr "Спасибо!"
+
+#: univer_land/orders/templates/notifier/new-order_email_subject.txt:1
+msgid "New Order in System"
+msgstr "Новый заказ в системе"
+
+#: univer_land/orders/templates/notifier/staff-change-order-status_email_message.txt:2
+msgid "Good day!"
+msgstr "Здравствуйте!"
+
+#: univer_land/orders/templates/notifier/staff-change-order-status_email_message.txt:7
+msgid "You can see and manage your orders"
+msgstr "Вы можете увидеть и изменить свои заказы"
+
+#: univer_land/orders/templates/notifier/staff-change-order-status_email_subject.txt:2
+msgid "Change status of your order in system."
+msgstr "Изменение статуса Вашего заказа"
+
+#: univer_land/orders/templates/notifier/user-change-order-status_email_message.txt:3
+msgid "Thank you."
+msgstr "Спасибо!"
+
+#: univer_land/orders/templates/notifier/user-change-order-status_email_subject.txt:2
+msgid "Client make change status of order"
+msgstr "Клиент изменил статус заказа"
+
+#: univer_land/orders/templatetags/menu.py:8
+msgid "Create order"
+msgstr "Сделать заказ"
+
+#: univer_land/orders/templatetags/menu.py:13
+msgid "Create type of works"
+msgstr "Создать новый тип работ"
+
+#: univer_land/orders/templatetags/menu.py:18
+msgid "properties"
+msgstr "свойства"
+
+#: univer_land/orders/templatetags/menu.py:22
+msgid "applicants"
+msgstr ""
+
+#: univer_land/templates/base.html:22
+msgid "System of orders"
+msgstr "Система приема заявок"
+
+#: univer_land/templates/base.html:43
+msgid "Log out"
+msgstr "Выйти"
+
+#: univer_land/templates/base.html:67
+msgid "Change your locale"
+msgstr "Выбрать язык"
+
+#: univer_land/templates/base.html:77
+msgid "change"
+msgstr "Изменить"
+
+#: univer_land/templates/contacts.html:3
+msgid "Contacts"
+msgstr "Контакты"
+
+#: univer_land/templates/contacts.html:5
+msgid "Fax"
+msgstr "Факс"
+
+#: univer_land/templates/contacts.html:6
+msgid "E-mail"
+msgstr "Емэйл"
+
+#: univer_land/templates/home.html:5
+msgid "The system of applications for execution of works. "
+msgstr "Система приема заявок на выполнение работ. "
+
+#: univer_land/templates/home.html:6
+msgid "If you want to make a claim you need to register and log in service."
+msgstr ""
+"Если Вы хотите сделать заявку, Вам необходимо зарегистрироваться в системе."
+
+#: univer_land/templates/registration/activate.html:4
+msgid "Activation failed"
+msgstr "Активация не выполнена"
+
+#: univer_land/templates/registration/activate.html:8
+msgid "Wrong activation code, try the link again."
+msgstr ""
+"Указан не правильный код, воспользуйтесь ссылкой чтобы попробовать снова."
+
+#: univer_land/templates/registration/activation_complete.html:4
+msgid "Activation success"
+msgstr "Активация прошла успешно"
+
+#: univer_land/templates/registration/activation_complete.html:8
+msgid "You can now login."
+msgstr "Теперь Вы можете войти в систему."
+
+#: univer_land/templates/registration/activation_email.txt:3
+msgid "You fill out the registration form on the site"
+msgstr "Вы заполнили форму регистрации в системе заявок."
+
+#: univer_land/templates/registration/activation_email.txt:5
+msgid "Your account"
+msgstr "Ваш аккаунт"
+
+#: univer_land/templates/registration/activation_email.txt:5
+msgid "must be activated"
+msgstr "должен быть активирован."
+
+#: univer_land/templates/registration/activation_email.txt:5
+msgid "To do this, click on the link"
+msgstr "Чтобы сделать это, нажмите ссылку"
+
+#: univer_land/templates/registration/activation_email.txt:9
+msgid "If you have not registered on this site, ignore this message"
+msgstr ""
+"Если Вы не регистрировались в системе приема заявок, игнорируйте это письмо"
+
+#: univer_land/templates/registration/activation_email_subject.txt:1
+msgid "Register on the site"
+msgstr "Регистрация в системе"
+
+#: univer_land/templates/registration/password_reset_complete.html:3
+#: univer_land/templates/registration/password_reset_confirm.html:3
+#: univer_land/templates/registration/password_reset_confirm.html:4
+#: univer_land/templates/registration/password_reset_done.html:3
+msgid "Password reset"
+msgstr "Сброс пароля"
+
+#: univer_land/templates/registration/password_reset_complete.html:4
+#: univer_land/templates/registration/password_reset_done.html:4
+msgid "Password successfully restored"
+msgstr "Пароль успешно восстановлен"
+
+#: univer_land/templates/registration/password_reset_complete.html:8
+msgid "Your password has been saved. Now you can enter."
+msgstr "Ваш пароль сохранен, теперь Вы можете зайти."
+
+#: univer_land/templates/registration/password_reset_confirm.html:13
+msgid "Password"
+msgstr "Пароль"
+
+#: univer_land/templates/registration/password_reset_confirm.html:25
+msgid "Repeat password"
+msgstr "Повторите пароль"
+
+#: univer_land/templates/registration/password_reset_confirm.html:36
+msgid "fields are required"
+msgstr "поля обязательные для заполнения"
+
+#: univer_land/templates/registration/password_reset_confirm.html:44
+msgid "Link not correct, or out of date"
+msgstr "ссылка не правильная или устарела"
+
+#: univer_land/templates/registration/password_reset_done.html:8
+msgid ""
+"We have sent the instructions to reset your password to the email address "
+"you provided. You should get it soon."
+msgstr ""
+"Мы выслали Вам инструкцию по восстановлению пароля на Ваш адрес указанный в "
+"профиле. Проверьте почту, скоро придет письмо."
+
+#: univer_land/templates/registration/registration_complete.html:4
+msgid "Registration success"
+msgstr "Регистрация прошла успешно"
+
+#~ msgid "code"
+#~ msgstr "Код"
+
+#~ msgid "update picture"
+#~ msgstr "обновить картинку"

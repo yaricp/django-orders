@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load static i18n %}
+{% block js %}
+    <script type="text/javascript" src="{% get_static_prefix %}js/profile.js"></script>
+{% endblock %}
+{% block top_menu %}
+    <li><a href="javascript: void(0)" onclick="load_form(url='../edit_profile')">
+        <i class="icon-pencil-1"></i>{% trans "Edit" %}</a></li>
+    <li><a href="javascript: void(0)" onclick="load_form(url='/accounts/password/change/')">
+        <i class="icon-key-1"></i>{% trans "Change password" %}</a>
+        </li>
+    {% if profile.user.is_superuser %}
+        <li><a href="{% url 'manage_users' %}">
+            <i class="icon-users-1"></i>{% trans "manage users" %}</a>
+        </li>
+        <li><a href="{% url 'list_type_work' %}">
+            <i class="icon-list-bullet"></i>{% trans "manage works" %}</a>
+        </li>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="container resume">
+      <header><h2>{% trans "Profile" %}</h2></header>
+      <table width="90%">
+          <tr><td><p>{% trans "Username" %}:</p></td>
+              <td><p><b> {{ profile.user.username }}</b></p></td></tr>
+          <tr><td><p>{% trans "Fullname" %}:</p></td>
+              <td><p><b>{{ profile.fullname }}<b></p></td></tr>
+          <tr><td><p>{% trans "Phone" %}:</p></td>
+              <td><p><b>{{ profile.phone }}<b></p></td></tr>
+          <tr><td><p>{% trans "Info" %}:</p></td>
+              <td><p><b>{{ profile.info }}<b></p></td></tr>
+          <tr><td><p>{% trans "Email" %}:</p></td>
+              <td><p><b>{{ profile.user.mail }}<b></p></td></tr>
+          <tr><td><p>{% trans "link to profile on forum" %}:</p></td><td><p><b>
+            {% if profile.nikforum %}
+              <a href="{{ profile.nikforum }}">{% trans 'profile on forum' %}</a>
+            {% endif %}
+              <b></p></td></tr>
+          <tr><td><p>{% trans "Last login" %}:</p></td>
+              <td><p><b>{{ profile.user.last_login }}<b></p></td></tr>
+          <tr><td><p>{% trans "Point in a map" %}:</p></td><td><p><b>
+            {% if profile.pointmap %}
+              <a href="{{ profile.pointmap }}">{% trans 'point' %}</a>
+            {% endif %}
+              <b></p></td></tr>
+      </table>
+    </div>
+
+{% endblock %}

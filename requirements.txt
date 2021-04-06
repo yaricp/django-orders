@@ -4,7 +4,7 @@ South==1.0
 argparse==1.2.1
 captcha==0.1.1
 django-notifier==0.7
-django-registration==1.0
+django-registration==3.1.2
 django-simple-captcha==0.4.2
 raven==5.1.1
 six==1.8.0
